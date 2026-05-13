@@ -1,17 +1,7 @@
-// src/engine/pipeline.rs
-
+#[derive(Debug, Clone)]
 pub struct FrameBuffer {
     pub width: usize,
     pub height: usize,
-    pub data: Vec<u8>,
-}
-
-impl FrameBuffer {
-    pub fn new(width: usize, height: usize) -> Self {
-        Self {
-            width,
-            height,
-            data: vec![0; width * height * 4],
-        }
-    }
+    pub rgb_data: Vec<u8>,
+    pub luma_data: Vec<f32>,
 }
